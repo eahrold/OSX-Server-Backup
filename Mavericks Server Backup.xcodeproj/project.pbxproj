@@ -18,6 +18,11 @@
 		BE24E3BF19019C2B00813B90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E39E19019C2B00813B90 /* Cocoa.framework */; };
 		BE24E3C719019C2B00813B90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3C519019C2B00813B90 /* InfoPlist.strings */; };
 		BE24E3C919019C2B00813B90 /* Mavericks_Server_BackupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3C819019C2B00813B90 /* Mavericks_Server_BackupTests.m */; };
+		BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
+		BE24E3DB1902AAD100813B90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E3DA1902AAD100813B90 /* Foundation.framework */; };
+		BE24E3DE1902AAD100813B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3DD1902AAD100813B90 /* main.m */; };
+		BE24E3E91902AB1800813B90 /* mavservbak in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE24E3D91902AAD100813B90 /* mavservbak */; };
+		BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +33,27 @@
 			remoteGlobalIDString = BE24E39A19019C2B00813B90;
 			remoteInfo = "Mavericks Server Backup";
 		};
+		BE24E3E61902AAF600813B90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE24E39319019C2B00813B90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE24E3D81902AAD100813B90;
+			remoteInfo = mavservbak;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE24E3E81902AB0A00813B90 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				BE24E3E91902AB1800813B90 /* mavservbak in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BE24E39B19019C2B00813B90 /* Mavericks Server Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mavericks Server Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +75,12 @@
 		BE24E3C419019C2B00813B90 /* Mavericks Server BackupTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mavericks Server BackupTests-Info.plist"; sourceTree = "<group>"; };
 		BE24E3C619019C2B00813B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE24E3C819019C2B00813B90 /* Mavericks_Server_BackupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mavericks_Server_BackupTests.m; sourceTree = "<group>"; };
+		BE24E3D21901BAC900813B90 /* OSXSBackupTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSBackupTasks.h; sourceTree = "<group>"; };
+		BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSBackupTasks.m; sourceTree = "<group>"; };
+		BE24E3D91902AAD100813B90 /* mavservbak */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mavservbak; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE24E3DA1902AAD100813B90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE24E3DD1902AAD100813B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE24E3E01902AAD100813B90 /* mavservbak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mavservbak-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE24E3D61902AAD100813B90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE24E3DB1902AAD100813B90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BE24E3A419019C2B00813B90 /* Mavericks Server Backup */,
+				BE24E3DC1902AAD100813B90 /* mavservbak */,
 				BE24E3C219019C2B00813B90 /* Mavericks Server BackupTests */,
 				BE24E39D19019C2B00813B90 /* Frameworks */,
 				BE24E39C19019C2B00813B90 /* Products */,
@@ -88,6 +128,7 @@
 			children = (
 				BE24E39B19019C2B00813B90 /* Mavericks Server Backup.app */,
 				BE24E3BC19019C2B00813B90 /* Mavericks Server BackupTests.xctest */,
+				BE24E3D91902AAD100813B90 /* mavservbak */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +138,7 @@
 			children = (
 				BE24E39E19019C2B00813B90 /* Cocoa.framework */,
 				BE24E3BD19019C2B00813B90 /* XCTest.framework */,
+				BE24E3DA1902AAD100813B90 /* Foundation.framework */,
 				BE24E3A019019C2B00813B90 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -117,6 +159,8 @@
 			children = (
 				BE24E3B019019C2B00813B90 /* MSBAppDelegate.h */,
 				BE24E3B119019C2B00813B90 /* MSBAppDelegate.m */,
+				BE24E3D21901BAC900813B90 /* OSXSBackupTasks.h */,
+				BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */,
 				BE24E3B319019C2B00813B90 /* MainMenu.xib */,
 				BE24E3B619019C2B00813B90 /* Images.xcassets */,
 				BE24E3A519019C2B00813B90 /* Supporting Files */,
@@ -154,6 +198,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BE24E3DC1902AAD100813B90 /* mavservbak */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E3DD1902AAD100813B90 /* main.m */,
+				BE24E3DF1902AAD100813B90 /* Supporting Files */,
+			);
+			path = mavservbak;
+			sourceTree = "<group>";
+		};
+		BE24E3DF1902AAD100813B90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E3E01902AAD100813B90 /* mavservbak-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,10 +225,12 @@
 				BE24E39719019C2B00813B90 /* Sources */,
 				BE24E39819019C2B00813B90 /* Frameworks */,
 				BE24E39919019C2B00813B90 /* Resources */,
+				BE24E3E81902AB0A00813B90 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BE24E3E71902AAF600813B90 /* PBXTargetDependency */,
 			);
 			name = "Mavericks Server Backup";
 			productName = "Mavericks Server Backup";
@@ -191,6 +254,22 @@
 			productName = "Mavericks Server BackupTests";
 			productReference = BE24E3BC19019C2B00813B90 /* Mavericks Server BackupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE24E3D81902AAD100813B90 /* mavservbak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE24E3E31902AAD100813B90 /* Build configuration list for PBXNativeTarget "mavservbak" */;
+			buildPhases = (
+				BE24E3D51902AAD100813B90 /* Sources */,
+				BE24E3D61902AAD100813B90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mavservbak;
+			productName = mavservbak;
+			productReference = BE24E3D91902AAD100813B90 /* mavservbak */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -221,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				BE24E39A19019C2B00813B90 /* Mavericks Server Backup */,
+				BE24E3D81902AAD100813B90 /* mavservbak */,
 				BE24E3BB19019C2B00813B90 /* Mavericks Server BackupTests */,
 			);
 		};
@@ -253,8 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE24E3AB19019C2B00813B90 /* main.m in Sources */,
 				BE24E3B219019C2B00813B90 /* MSBAppDelegate.m in Sources */,
+				BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */,
+				BE24E3AB19019C2B00813B90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +347,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE24E3D51902AAD100813B90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */,
+				BE24E3DE1902AAD100813B90 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -273,6 +363,11 @@
 			isa = PBXTargetDependency;
 			target = BE24E39A19019C2B00813B90 /* Mavericks Server Backup */;
 			targetProxy = BE24E3C019019C2B00813B90 /* PBXContainerItemProxy */;
+		};
+		BE24E3E71902AAF600813B90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE24E3D81902AAD100813B90 /* mavservbak */;
+			targetProxy = BE24E3E61902AAF600813B90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -446,6 +541,30 @@
 			};
 			name = Release;
 		};
+		BE24E3E41902AAD100813B90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mavservbak/mavservbak-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE24E3E51902AAD100813B90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mavservbak/mavservbak-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +590,14 @@
 			buildConfigurations = (
 				BE24E3D019019C2B00813B90 /* Debug */,
 				BE24E3D119019C2B00813B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE24E3E31902AAD100813B90 /* Build configuration list for PBXNativeTarget "mavservbak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE24E3E41902AAD100813B90 /* Debug */,
+				BE24E3E51902AAD100813B90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
