@@ -1,0 +1,1177 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE115D3A1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
+		BE115D3B1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
+		BE115D3C1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
+		BE24E39F19019C2B00813B90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E39E19019C2B00813B90 /* Cocoa.framework */; };
+		BE24E3A919019C2B00813B90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3A719019C2B00813B90 /* InfoPlist.strings */; };
+		BE24E3AB19019C2B00813B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3AA19019C2B00813B90 /* main.m */; };
+		BE24E3AF19019C2B00813B90 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3AD19019C2B00813B90 /* Credits.rtf */; };
+		BE24E3B219019C2B00813B90 /* OSXSBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3B119019C2B00813B90 /* OSXSBAppDelegate.m */; };
+		BE24E3B519019C2B00813B90 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3B319019C2B00813B90 /* MainMenu.xib */; };
+		BE24E3B719019C2B00813B90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3B619019C2B00813B90 /* Images.xcassets */; };
+		BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
+		BE24E3DB1902AAD100813B90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E3DA1902AAD100813B90 /* Foundation.framework */; };
+		BE24E3DE1902AAD100813B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3DD1902AAD100813B90 /* main.m */; };
+		BE24E3E91902AB1800813B90 /* osxsbak in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE24E3D91902AAD100813B90 /* osxsbak */; };
+		BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
+		BE8DC3B61907172F00E1AA58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E3DA1902AAD100813B90 /* Foundation.framework */; };
+		BE8DC3C21907197F00E1AA58 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7BB61906F3240086892D /* Security.framework */; };
+		BE8DC3C31907198300E1AA58 /* libAHLaunchCtl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C071907092D0086892D /* libAHLaunchCtl.a */; };
+		BE8DC3C41907199200E1AA58 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C1019070C7E0086892D /* SystemConfiguration.framework */; };
+		BE8DC3C51907199A00E1AA58 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C1319070C9C0086892D /* ServiceManagement.framework */; };
+		BE8DC3C8190719BD00E1AA58 /* com.eeaapps.osxsbak.helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE8DC3B51907172F00E1AA58 /* com.eeaapps.osxsbak.helper */; };
+		BE8DC3C9190719DB00E1AA58 /* OSXSBAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7BF3190704B00086892D /* OSXSBAuthorizer.m */; };
+		BE8DC3CA190719E300E1AA58 /* OSXSBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7BE61906FCA50086892D /* OSXSBHelper.m */; };
+		BE8DC3CB190719E600E1AA58 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
+		BE8DC3CC190719F300E1AA58 /* NSTask+ExpectTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7B9B1906B7910086892D /* NSTask+ExpectTask.m */; };
+		BE9727A419107903004237E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7BB61906F3240086892D /* Security.framework */; };
+		BEA37098190D898D0073E12E /* AHCodesignValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA37097190D898D0073E12E /* AHCodesignValidator.m */; };
+		BEBC7B9D1906B7910086892D /* NSTask+ExpectTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7B9B1906B7910086892D /* NSTask+ExpectTask.m */; };
+		BEBC7BB71906F3240086892D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7BB61906F3240086892D /* Security.framework */; };
+		BEBC7BF4190704B00086892D /* OSXSBAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7BF3190704B00086892D /* OSXSBAuthorizer.m */; };
+		BEBC7BF9190708330086892D /* OSXSBHelperConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7BF8190708330086892D /* OSXSBHelperConnection.m */; };
+		BEBC7C0E190709730086892D /* libAHLaunchCtl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C071907092D0086892D /* libAHLaunchCtl.a */; };
+		BEBC7C1219070C870086892D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C1019070C7E0086892D /* SystemConfiguration.framework */; };
+		BEBC7C1419070C9C0086892D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C1319070C9C0086892D /* ServiceManagement.framework */; };
+		BEC2A789190AD7BB00AB1271 /* libObjective_CUPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632C21907661800D2E440 /* libObjective_CUPS.a */; };
+		BEC2A78F190AD7E200AB1271 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D319076B7300D2E440 /* libz.dylib */; };
+		BEDA2AD7190AD78D00FA52D4 /* libcups.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D119076B4900D2E440 /* libcups.dylib */; };
+		BEE632B71907560E00D2E440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC7BD91906FB2E0086892D /* main.m */; };
+		BEE632C71907668700D2E440 /* libObjective_CUPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632C21907661800D2E440 /* libObjective_CUPS.a */; };
+		BEE632CA1907669C00D2E440 /* libObjective_CUPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632C21907661800D2E440 /* libObjective_CUPS.a */; };
+		BEE632D219076B4900D2E440 /* libcups.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D119076B4900D2E440 /* libcups.dylib */; };
+		BEE632D419076B7300D2E440 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D319076B7300D2E440 /* libz.dylib */; };
+		BEE632D519076B7A00D2E440 /* libcups.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D119076B4900D2E440 /* libcups.dylib */; };
+		BEE632D619076B8100D2E440 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D319076B7300D2E440 /* libz.dylib */; };
+		BEE632DC19077D5400D2E440 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E3BD19019C2B00813B90 /* XCTest.framework */; };
+		BEE632E219077D5400D2E440 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE632E019077D5400D2E440 /* InfoPlist.strings */; };
+		BEE632E419077D5400D2E440 /* osxsbakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632E319077D5400D2E440 /* osxsbakTests.m */; };
+		BEE632EB19077D6100D2E440 /* libObjective_CUPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632C21907661800D2E440 /* libObjective_CUPS.a */; };
+		BEE632EC19077D6B00D2E440 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D319076B7300D2E440 /* libz.dylib */; };
+		BEE632ED19077D6E00D2E440 /* libcups.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE632D119076B4900D2E440 /* libcups.dylib */; };
+		BEE632EE19077D7500D2E440 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7BB61906F3240086892D /* Security.framework */; };
+		BEE632F1190800C900D2E440 /* OSXSBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632F0190800C900D2E440 /* OSXSBUtility.m */; };
+		BEE632F2190800C900D2E440 /* OSXSBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632F0190800C900D2E440 /* OSXSBUtility.m */; };
+		BEE632F3190800C900D2E440 /* OSXSBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632F0190800C900D2E440 /* OSXSBUtility.m */; };
+		BEE632F7190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632F5190806FC00D2E440 /* NSFileHandle+writeToFile.m */; };
+		BEE632F8190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632F5190806FC00D2E440 /* NSFileHandle+writeToFile.m */; };
+		BEE632FC1908177700D2E440 /* OSXSBError.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632FB1908177700D2E440 /* OSXSBError.m */; };
+		BEE632FD1908177700D2E440 /* OSXSBError.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632FB1908177700D2E440 /* OSXSBError.m */; };
+		BEE632FE1908177700D2E440 /* OSXSBError.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE632FB1908177700D2E440 /* OSXSBError.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE24E3E61902AAF600813B90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE24E39319019C2B00813B90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE24E3D81902AAD100813B90;
+			remoteInfo = mavservbak;
+		};
+		BE8DC3C6190719AA00E1AA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE24E39319019C2B00813B90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE8DC3B41907172F00E1AA58;
+			remoteInfo = com.eeaapps.osxsbak.helper;
+		};
+		BEBC7C021907092D0086892D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE91DC4418A586D5000FD8D7;
+			remoteInfo = LaunchControl;
+		};
+		BEBC7C041907092D0086892D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE5B001B18A55BAA000D8603;
+			remoteInfo = com.eeaapps.launchctl.helper;
+		};
+		BEBC7C061907092D0086892D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE76C6F118A19369003C94A0;
+			remoteInfo = AHLaunchCtl;
+		};
+		BEBC7C081907092D0086892D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE76C70418A19369003C94A0;
+			remoteInfo = AHLaunchCtlTests;
+		};
+		BEBC7C0C190709680086892D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE76C6F018A19369003C94A0;
+			remoteInfo = AHLaunchCtl;
+		};
+		BEC2A78D190AD7C000AB1271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE26D3C51890C83600DD31AB;
+			remoteInfo = Objective_CUPS;
+		};
+		BEE632BF1907661800D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE26D39518909E4F00DD31AB;
+			remoteInfo = "Objective-CUPS";
+		};
+		BEE632C11907661800D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE26D3C61890C83600DD31AB;
+			remoteInfo = Objective_CUPS;
+		};
+		BEE632C31907661800D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE26D3D21890C83600DD31AB;
+			remoteInfo = Objective_CUPSTests;
+		};
+		BEE632C51907661800D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE42458618C63EE300B527B9;
+			remoteInfo = "test-cli";
+		};
+		BEE632C81907668E00D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE26D3C51890C83600DD31AB;
+			remoteInfo = Objective_CUPS;
+		};
+		BEE632CB190766A400D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE76C6F018A19369003C94A0;
+			remoteInfo = AHLaunchCtl;
+		};
+		BEE632CD190766A400D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE26D3C51890C83600DD31AB;
+			remoteInfo = Objective_CUPS;
+		};
+		BEE632E619077D5400D2E440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE24E39319019C2B00813B90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE24E3D81902AAD100813B90;
+			remoteInfo = osxsbak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE24E3E81902AB0A00813B90 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				BE24E3E91902AB1800813B90 /* osxsbak in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEBC7BEB1906FE4C0086892D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				BE8DC3C8190719BD00E1AA58 /* com.eeaapps.osxsbak.helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE115D381911DAB200CB7530 /* AHKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKeychainManager.h; sourceTree = "<group>"; };
+		BE115D391911DAB200CB7530 /* AHKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKeychainManager.m; sourceTree = "<group>"; };
+		BE1E59AE190DBEB6000BBC2C /* osxsbak-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "osxsbak-Info.plist"; sourceTree = "<group>"; };
+		BE1F1B1E19102675001D2EA4 /* HelperTool_CodeSign_RunScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HelperTool_CodeSign_RunScript.py; sourceTree = "<group>"; };
+		BE1F1B20191028E8001D2EA4 /* Resign_CodeSign_RunScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = Resign_CodeSign_RunScript.py; sourceTree = "<group>"; };
+		BE24E39B19019C2B00813B90 /* OSX Server Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX Server Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE24E39E19019C2B00813B90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BE24E3A119019C2B00813B90 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BE24E3A219019C2B00813B90 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE24E3A319019C2B00813B90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE24E3A619019C2B00813B90 /* OSX Server Backup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSX Server Backup-Info.plist"; sourceTree = "<group>"; };
+		BE24E3A819019C2B00813B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE24E3AA19019C2B00813B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BE24E3AC19019C2B00813B90 /* OSX Server Backup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSX Server Backup-Prefix.pch"; sourceTree = "<group>"; };
+		BE24E3AE19019C2B00813B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BE24E3B019019C2B00813B90 /* OSXSBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OSXSBAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BE24E3B119019C2B00813B90 /* OSXSBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OSXSBAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BE24E3B419019C2B00813B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BE24E3B619019C2B00813B90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE24E3BD19019C2B00813B90 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BE24E3D21901BAC900813B90 /* OSXSBackupTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OSXSBackupTasks.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OSXSBackupTasks.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BE24E3D91902AAD100813B90 /* osxsbak */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = osxsbak; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE24E3DA1902AAD100813B90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE24E3DD1902AAD100813B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BE24E3E01902AAD100813B90 /* osxsbak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "osxsbak-Prefix.pch"; sourceTree = "<group>"; };
+		BE8DC3B51907172F00E1AA58 /* com.eeaapps.osxsbak.helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.eeaapps.osxsbak.helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA37096190D898D0073E12E /* AHCodesignValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCodesignValidator.h; sourceTree = "<group>"; };
+		BEA37097190D898D0073E12E /* AHCodesignValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCodesignValidator.m; sourceTree = "<group>"; };
+		BEBC7B9A1906B7910086892D /* NSTask+ExpectTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSTask+ExpectTask.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BEBC7B9B1906B7910086892D /* NSTask+ExpectTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSTask+ExpectTask.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BEBC7BB61906F3240086892D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BEBC7BD91906FB2E0086892D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEBC7BDC1906FB2E0086892D /* helper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "helper-Prefix.pch"; sourceTree = "<group>"; };
+		BEBC7BE21906FC060086892D /* helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "helper-Info.plist"; sourceTree = "<group>"; };
+		BEBC7BE31906FC060086892D /* helper-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "helper-Launchd.plist"; sourceTree = "<group>"; };
+		BEBC7BE41906FC670086892D /* HelperTool_CodeSign_RunScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = HelperTool_CodeSign_RunScript.py; path = ../HelperTool_CodeSign_RunScript.py; sourceTree = "<group>"; };
+		BEBC7BE51906FCA50086892D /* OSXSBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSBHelper.h; sourceTree = "<group>"; };
+		BEBC7BE61906FCA50086892D /* OSXSBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSBHelper.m; sourceTree = "<group>"; };
+		BEBC7BE81906FD200086892D /* OSXSBInterfaces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSXSBInterfaces.h; sourceTree = "<group>"; };
+		BEBC7BF2190704B00086892D /* OSXSBAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSBAuthorizer.h; sourceTree = "<group>"; };
+		BEBC7BF3190704B00086892D /* OSXSBAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSBAuthorizer.m; sourceTree = "<group>"; };
+		BEBC7BF7190708330086892D /* OSXSBHelperConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSBHelperConnection.h; sourceTree = "<group>"; };
+		BEBC7BF8190708330086892D /* OSXSBHelperConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSBHelperConnection.m; sourceTree = "<group>"; };
+		BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AHLaunchCtl.xcodeproj; path = ../../Frameworks/AHLaunchCtl/AHLaunchCtl.xcodeproj; sourceTree = "<group>"; };
+		BEBC7C1019070C7E0086892D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BEBC7C1319070C9C0086892D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Objective-CUPS.xcodeproj"; path = "../../Frameworks/Objective-CUPS/Objective-CUPS.xcodeproj"; sourceTree = "<group>"; };
+		BEE632D119076B4900D2E440 /* libcups.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcups.dylib; path = usr/lib/libcups.dylib; sourceTree = SDKROOT; };
+		BEE632D319076B7300D2E440 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BEE632DB19077D5400D2E440 /* osxsbakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osxsbakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE632DF19077D5400D2E440 /* osxsbakTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "osxsbakTests-Info.plist"; sourceTree = "<group>"; };
+		BEE632E119077D5400D2E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BEE632E319077D5400D2E440 /* osxsbakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osxsbakTests.m; sourceTree = "<group>"; };
+		BEE632E519077D5400D2E440 /* osxsbakTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "osxsbakTests-Prefix.pch"; sourceTree = "<group>"; };
+		BEE632EF190800C900D2E440 /* OSXSBUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OSXSBUtility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		BEE632F0190800C900D2E440 /* OSXSBUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OSXSBUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BEE632F4190806FC00D2E440 /* NSFileHandle+writeToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+writeToFile.h"; path = "OSXServerBackup/NSFileHandle+writeToFile.h"; sourceTree = SOURCE_ROOT; };
+		BEE632F5190806FC00D2E440 /* NSFileHandle+writeToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileHandle+writeToFile.m"; path = "OSXServerBackup/NSFileHandle+writeToFile.m"; sourceTree = SOURCE_ROOT; };
+		BEE632FA1908177700D2E440 /* OSXSBError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSBError.h; sourceTree = "<group>"; };
+		BEE632FB1908177700D2E440 /* OSXSBError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSBError.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE24E39819019C2B00813B90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC2A78F190AD7E200AB1271 /* libz.dylib in Frameworks */,
+				BEDA2AD7190AD78D00FA52D4 /* libcups.dylib in Frameworks */,
+				BEC2A789190AD7BB00AB1271 /* libObjective_CUPS.a in Frameworks */,
+				BEBC7C0E190709730086892D /* libAHLaunchCtl.a in Frameworks */,
+				BE9727A419107903004237E0 /* Security.framework in Frameworks */,
+				BEBC7C1419070C9C0086892D /* ServiceManagement.framework in Frameworks */,
+				BEBC7C1219070C870086892D /* SystemConfiguration.framework in Frameworks */,
+				BE24E39F19019C2B00813B90 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE24E3D61902AAD100813B90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632D619076B8100D2E440 /* libz.dylib in Frameworks */,
+				BEE632D519076B7A00D2E440 /* libcups.dylib in Frameworks */,
+				BEE632C71907668700D2E440 /* libObjective_CUPS.a in Frameworks */,
+				BEBC7BB71906F3240086892D /* Security.framework in Frameworks */,
+				BE24E3DB1902AAD100813B90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE8DC3B21907172F00E1AA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632D419076B7300D2E440 /* libz.dylib in Frameworks */,
+				BEE632D219076B4900D2E440 /* libcups.dylib in Frameworks */,
+				BEE632CA1907669C00D2E440 /* libObjective_CUPS.a in Frameworks */,
+				BE8DC3C31907198300E1AA58 /* libAHLaunchCtl.a in Frameworks */,
+				BE8DC3C51907199A00E1AA58 /* ServiceManagement.framework in Frameworks */,
+				BE8DC3C41907199200E1AA58 /* SystemConfiguration.framework in Frameworks */,
+				BE8DC3C21907197F00E1AA58 /* Security.framework in Frameworks */,
+				BE8DC3B61907172F00E1AA58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE632D819077D5400D2E440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632EB19077D6100D2E440 /* libObjective_CUPS.a in Frameworks */,
+				BEE632DC19077D5400D2E440 /* XCTest.framework in Frameworks */,
+				BEE632EE19077D7500D2E440 /* Security.framework in Frameworks */,
+				BEE632EC19077D6B00D2E440 /* libz.dylib in Frameworks */,
+				BEE632ED19077D6E00D2E440 /* libcups.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE24E39219019C2B00813B90 = {
+			isa = PBXGroup;
+			children = (
+				BE1F1B1E19102675001D2EA4 /* HelperTool_CodeSign_RunScript.py */,
+				BE1F1B20191028E8001D2EA4 /* Resign_CodeSign_RunScript.py */,
+				BEBC7BF1190702370086892D /* Shared */,
+				BE24E3A419019C2B00813B90 /* OSX Server Backup */,
+				BEBC7BD81906FB2E0086892D /* com.eeaapps.osxsbak.helper */,
+				BE24E3DC1902AAD100813B90 /* osxsbak */,
+				BEE632DD19077D5400D2E440 /* osxsbakTests */,
+				BE24E39D19019C2B00813B90 /* Frameworks */,
+				BE24E39C19019C2B00813B90 /* Products */,
+				BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */,
+				BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		BE24E39C19019C2B00813B90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E39B19019C2B00813B90 /* OSX Server Backup.app */,
+				BE24E3D91902AAD100813B90 /* osxsbak */,
+				BE8DC3B51907172F00E1AA58 /* com.eeaapps.osxsbak.helper */,
+				BEE632DB19077D5400D2E440 /* osxsbakTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE24E39D19019C2B00813B90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEE632D319076B7300D2E440 /* libz.dylib */,
+				BEE632D119076B4900D2E440 /* libcups.dylib */,
+				BEBC7C1319070C9C0086892D /* ServiceManagement.framework */,
+				BEBC7C1019070C7E0086892D /* SystemConfiguration.framework */,
+				BEBC7BB61906F3240086892D /* Security.framework */,
+				BE24E39E19019C2B00813B90 /* Cocoa.framework */,
+				BE24E3BD19019C2B00813B90 /* XCTest.framework */,
+				BE24E3DA1902AAD100813B90 /* Foundation.framework */,
+				BE24E3A019019C2B00813B90 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE24E3A019019C2B00813B90 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E3A119019C2B00813B90 /* AppKit.framework */,
+				BE24E3A219019C2B00813B90 /* CoreData.framework */,
+				BE24E3A319019C2B00813B90 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BE24E3A419019C2B00813B90 /* OSX Server Backup */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E3B019019C2B00813B90 /* OSXSBAppDelegate.h */,
+				BE24E3B119019C2B00813B90 /* OSXSBAppDelegate.m */,
+				BEBC7BF7190708330086892D /* OSXSBHelperConnection.h */,
+				BEBC7BF8190708330086892D /* OSXSBHelperConnection.m */,
+				BE24E3B319019C2B00813B90 /* MainMenu.xib */,
+				BE24E3B619019C2B00813B90 /* Images.xcassets */,
+				BE24E3A519019C2B00813B90 /* Supporting Files */,
+			);
+			name = "OSX Server Backup";
+			path = OSXServerBackup;
+			sourceTree = "<group>";
+		};
+		BE24E3A519019C2B00813B90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE115D381911DAB200CB7530 /* AHKeychainManager.h */,
+				BE115D391911DAB200CB7530 /* AHKeychainManager.m */,
+				BEA37096190D898D0073E12E /* AHCodesignValidator.h */,
+				BEA37097190D898D0073E12E /* AHCodesignValidator.m */,
+				BEBC7BE41906FC670086892D /* HelperTool_CodeSign_RunScript.py */,
+				BEE632F9190807E800D2E440 /* Catagories */,
+				BE24E3A619019C2B00813B90 /* OSX Server Backup-Info.plist */,
+				BE24E3A719019C2B00813B90 /* InfoPlist.strings */,
+				BE24E3AA19019C2B00813B90 /* main.m */,
+				BE24E3AC19019C2B00813B90 /* OSX Server Backup-Prefix.pch */,
+				BE24E3AD19019C2B00813B90 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE24E3DC1902AAD100813B90 /* osxsbak */ = {
+			isa = PBXGroup;
+			children = (
+				BE24E3DD1902AAD100813B90 /* main.m */,
+				BE24E3DF1902AAD100813B90 /* Supporting Files */,
+			);
+			path = osxsbak;
+			sourceTree = "<group>";
+		};
+		BE24E3DF1902AAD100813B90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE1E59AE190DBEB6000BBC2C /* osxsbak-Info.plist */,
+				BE24E3E01902AAD100813B90 /* osxsbak-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEBC7BD81906FB2E0086892D /* com.eeaapps.osxsbak.helper */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC7BE51906FCA50086892D /* OSXSBHelper.h */,
+				BEBC7BE61906FCA50086892D /* OSXSBHelper.m */,
+				BEBC7BDB1906FB2E0086892D /* Supporting Files */,
+			);
+			name = com.eeaapps.osxsbak.helper;
+			path = helper;
+			sourceTree = "<group>";
+		};
+		BEBC7BDB1906FB2E0086892D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC7BD91906FB2E0086892D /* main.m */,
+				BEBC7BE31906FC060086892D /* helper-Launchd.plist */,
+				BEBC7BE21906FC060086892D /* helper-Info.plist */,
+				BEBC7BDC1906FB2E0086892D /* helper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEBC7BF1190702370086892D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC7BE81906FD200086892D /* OSXSBInterfaces.h */,
+				BEBC7BF2190704B00086892D /* OSXSBAuthorizer.h */,
+				BEBC7BF3190704B00086892D /* OSXSBAuthorizer.m */,
+				BE24E3D21901BAC900813B90 /* OSXSBackupTasks.h */,
+				BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */,
+				BEE632FA1908177700D2E440 /* OSXSBError.h */,
+				BEE632FB1908177700D2E440 /* OSXSBError.m */,
+				BEE632EF190800C900D2E440 /* OSXSBUtility.h */,
+				BEE632F0190800C900D2E440 /* OSXSBUtility.m */,
+			);
+			name = Shared;
+			path = OSXServerBackup;
+			sourceTree = "<group>";
+		};
+		BEBC7BFC1907092B0086892D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC7C031907092D0086892D /* LaunchControl.app */,
+				BEBC7C051907092D0086892D /* com.eeaapps.launchctl.helper */,
+				BEBC7C071907092D0086892D /* libAHLaunchCtl.a */,
+				BEBC7C091907092D0086892D /* AHLaunchCtlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEE632B91907661800D2E440 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEE632C01907661800D2E440 /* Objective-CUPS.framework */,
+				BEE632C21907661800D2E440 /* libObjective_CUPS.a */,
+				BEE632C41907661800D2E440 /* Objective_CUPSTests.xctest */,
+				BEE632C61907661800D2E440 /* test-cli */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEE632DD19077D5400D2E440 /* osxsbakTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEE632E319077D5400D2E440 /* osxsbakTests.m */,
+				BEE632DE19077D5400D2E440 /* Supporting Files */,
+			);
+			path = osxsbakTests;
+			sourceTree = "<group>";
+		};
+		BEE632DE19077D5400D2E440 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEE632DF19077D5400D2E440 /* osxsbakTests-Info.plist */,
+				BEE632E019077D5400D2E440 /* InfoPlist.strings */,
+				BEE632E519077D5400D2E440 /* osxsbakTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEE632F9190807E800D2E440 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				BEE632F4190806FC00D2E440 /* NSFileHandle+writeToFile.h */,
+				BEE632F5190806FC00D2E440 /* NSFileHandle+writeToFile.m */,
+				BEBC7B9A1906B7910086892D /* NSTask+ExpectTask.h */,
+				BEBC7B9B1906B7910086892D /* NSTask+ExpectTask.m */,
+			);
+			name = Catagories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE24E39A19019C2B00813B90 /* OSX Server Backup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE24E3CC19019C2B00813B90 /* Build configuration list for PBXNativeTarget "OSX Server Backup" */;
+			buildPhases = (
+				BEBC7BF01906FE9C0086892D /* ShellScript */,
+				BE24E39719019C2B00813B90 /* Sources */,
+				BE24E39819019C2B00813B90 /* Frameworks */,
+				BE24E39919019C2B00813B90 /* Resources */,
+				BE24E3E81902AB0A00813B90 /* CopyFiles */,
+				BEBC7BEB1906FE4C0086892D /* CopyFiles */,
+				BE1F1B1F19102715001D2EA4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC2A78E190AD7C000AB1271 /* PBXTargetDependency */,
+				BEBC7C0D190709680086892D /* PBXTargetDependency */,
+				BE24E3E71902AAF600813B90 /* PBXTargetDependency */,
+				BE8DC3C7190719AA00E1AA58 /* PBXTargetDependency */,
+			);
+			name = "OSX Server Backup";
+			productName = "Mavericks Server Backup";
+			productReference = BE24E39B19019C2B00813B90 /* OSX Server Backup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE24E3D81902AAD100813B90 /* osxsbak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE24E3E31902AAD100813B90 /* Build configuration list for PBXNativeTarget "osxsbak" */;
+			buildPhases = (
+				BE24E3D51902AAD100813B90 /* Sources */,
+				BE24E3D61902AAD100813B90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEE632C91907668E00D2E440 /* PBXTargetDependency */,
+			);
+			name = osxsbak;
+			productName = mavservbak;
+			productReference = BE24E3D91902AAD100813B90 /* osxsbak */;
+			productType = "com.apple.product-type.tool";
+		};
+		BE8DC3B41907172F00E1AA58 /* com.eeaapps.osxsbak.helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE8DC3BE1907172F00E1AA58 /* Build configuration list for PBXNativeTarget "com.eeaapps.osxsbak.helper" */;
+			buildPhases = (
+				BE8DC3B11907172F00E1AA58 /* Sources */,
+				BE8DC3B21907172F00E1AA58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEE632CC190766A400D2E440 /* PBXTargetDependency */,
+				BEE632CE190766A400D2E440 /* PBXTargetDependency */,
+			);
+			name = com.eeaapps.osxsbak.helper;
+			productName = helper;
+			productReference = BE8DC3B51907172F00E1AA58 /* com.eeaapps.osxsbak.helper */;
+			productType = "com.apple.product-type.tool";
+		};
+		BEE632DA19077D5400D2E440 /* osxsbakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEE632E819077D5400D2E440 /* Build configuration list for PBXNativeTarget "osxsbakTests" */;
+			buildPhases = (
+				BEE632D719077D5400D2E440 /* Sources */,
+				BEE632D819077D5400D2E440 /* Frameworks */,
+				BEE632D919077D5400D2E440 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEE632E719077D5400D2E440 /* PBXTargetDependency */,
+			);
+			name = osxsbakTests;
+			productName = osxsbakTests;
+			productReference = BEE632DB19077D5400D2E440 /* osxsbakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE24E39319019C2B00813B90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MSB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Eldon Ahrold";
+				TargetAttributes = {
+					BEE632DA19077D5400D2E440 = {
+						TestTargetID = BE24E3D81902AAD100813B90;
+					};
+				};
+			};
+			buildConfigurationList = BE24E39619019C2B00813B90 /* Build configuration list for PBXProject "OSX Server Backup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE24E39219019C2B00813B90;
+			productRefGroup = BE24E39C19019C2B00813B90 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BEBC7BFC1907092B0086892D /* Products */;
+					ProjectRef = BEBC7BFB1907092B0086892D /* AHLaunchCtl.xcodeproj */;
+				},
+				{
+					ProductGroup = BEE632B91907661800D2E440 /* Products */;
+					ProjectRef = BEE632B81907661800D2E440 /* Objective-CUPS.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BE24E39A19019C2B00813B90 /* OSX Server Backup */,
+				BE8DC3B41907172F00E1AA58 /* com.eeaapps.osxsbak.helper */,
+				BE24E3D81902AAD100813B90 /* osxsbak */,
+				BEE632DA19077D5400D2E440 /* osxsbakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BEBC7C031907092D0086892D /* LaunchControl.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LaunchControl.app;
+			remoteRef = BEBC7C021907092D0086892D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEBC7C051907092D0086892D /* com.eeaapps.launchctl.helper */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = com.eeaapps.launchctl.helper;
+			remoteRef = BEBC7C041907092D0086892D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEBC7C071907092D0086892D /* libAHLaunchCtl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAHLaunchCtl.a;
+			remoteRef = BEBC7C061907092D0086892D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEBC7C091907092D0086892D /* AHLaunchCtlTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AHLaunchCtlTests.xctest;
+			remoteRef = BEBC7C081907092D0086892D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEE632C01907661800D2E440 /* Objective-CUPS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "Objective-CUPS.framework";
+			remoteRef = BEE632BF1907661800D2E440 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEE632C21907661800D2E440 /* libObjective_CUPS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjective_CUPS.a;
+			remoteRef = BEE632C11907661800D2E440 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEE632C41907661800D2E440 /* Objective_CUPSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Objective_CUPSTests.xctest;
+			remoteRef = BEE632C31907661800D2E440 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BEE632C61907661800D2E440 /* test-cli */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "test-cli";
+			remoteRef = BEE632C51907661800D2E440 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE24E39919019C2B00813B90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE24E3A919019C2B00813B90 /* InfoPlist.strings in Resources */,
+				BE24E3B719019C2B00813B90 /* Images.xcassets in Resources */,
+				BE24E3AF19019C2B00813B90 /* Credits.rtf in Resources */,
+				BE24E3B519019C2B00813B90 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE632D919077D5400D2E440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632E219077D5400D2E440 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE1F1B1F19102715001D2EA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}\"/Resign_CodeSign_RunScript.py";
+		};
+		BEBC7BF01906FE9C0086892D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}\"/HelperTool_CodeSign_RunScript.py";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE24E39719019C2B00813B90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE24E3B219019C2B00813B90 /* OSXSBAppDelegate.m in Sources */,
+				BEBC7BF9190708330086892D /* OSXSBHelperConnection.m in Sources */,
+				BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */,
+				BEBC7BF4190704B00086892D /* OSXSBAuthorizer.m in Sources */,
+				BEE632FC1908177700D2E440 /* OSXSBError.m in Sources */,
+				BEE632F1190800C900D2E440 /* OSXSBUtility.m in Sources */,
+				BE115D3A1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
+				BE24E3AB19019C2B00813B90 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE24E3D51902AAD100813B90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632F2190800C900D2E440 /* OSXSBUtility.m in Sources */,
+				BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */,
+				BEE632F7190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */,
+				BE115D3C1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
+				BEBC7B9D1906B7910086892D /* NSTask+ExpectTask.m in Sources */,
+				BEE632FD1908177700D2E440 /* OSXSBError.m in Sources */,
+				BE24E3DE1902AAD100813B90 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE8DC3B11907172F00E1AA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632F3190800C900D2E440 /* OSXSBUtility.m in Sources */,
+				BE8DC3C9190719DB00E1AA58 /* OSXSBAuthorizer.m in Sources */,
+				BEA37098190D898D0073E12E /* AHCodesignValidator.m in Sources */,
+				BE8DC3CA190719E300E1AA58 /* OSXSBHelper.m in Sources */,
+				BE8DC3CB190719E600E1AA58 /* OSXSBackupTasks.m in Sources */,
+				BEE632F8190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */,
+				BE8DC3CC190719F300E1AA58 /* NSTask+ExpectTask.m in Sources */,
+				BEE632FE1908177700D2E440 /* OSXSBError.m in Sources */,
+				BE115D3B1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
+				BEE632B71907560E00D2E440 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE632D719077D5400D2E440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE632E419077D5400D2E440 /* osxsbakTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE24E3E71902AAF600813B90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE24E3D81902AAD100813B90 /* osxsbak */;
+			targetProxy = BE24E3E61902AAF600813B90 /* PBXContainerItemProxy */;
+		};
+		BE8DC3C7190719AA00E1AA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE8DC3B41907172F00E1AA58 /* com.eeaapps.osxsbak.helper */;
+			targetProxy = BE8DC3C6190719AA00E1AA58 /* PBXContainerItemProxy */;
+		};
+		BEBC7C0D190709680086892D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AHLaunchCtl;
+			targetProxy = BEBC7C0C190709680086892D /* PBXContainerItemProxy */;
+		};
+		BEC2A78E190AD7C000AB1271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Objective_CUPS;
+			targetProxy = BEC2A78D190AD7C000AB1271 /* PBXContainerItemProxy */;
+		};
+		BEE632C91907668E00D2E440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Objective_CUPS;
+			targetProxy = BEE632C81907668E00D2E440 /* PBXContainerItemProxy */;
+		};
+		BEE632CC190766A400D2E440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AHLaunchCtl;
+			targetProxy = BEE632CB190766A400D2E440 /* PBXContainerItemProxy */;
+		};
+		BEE632CE190766A400D2E440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Objective_CUPS;
+			targetProxy = BEE632CD190766A400D2E440 /* PBXContainerItemProxy */;
+		};
+		BEE632E719077D5400D2E440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE24E3D81902AAD100813B90 /* osxsbak */;
+			targetProxy = BEE632E619077D5400D2E440 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE24E3A719019C2B00813B90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE24E3A819019C2B00813B90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE24E3AD19019C2B00813B90 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE24E3AE19019C2B00813B90 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BE24E3B319019C2B00813B90 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE24E3B419019C2B00813B90 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BEE632E019077D5400D2E440 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEE632E119077D5400D2E440 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE24E3CA19019C2B00813B90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE24E3CB19019C2B00813B90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE24E3CD19019C2B00813B90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSXServerBackup/OSX Server Backup-Prefix.pch";
+				INFOPLIST_FILE = "OSXServerBackup/OSX Server Backup-Info.plist";
+				OTHER_CODE_SIGN_FLAGS = "";
+				PRODUCT_NAME = "OSX Server Backup";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE24E3CE19019C2B00813B90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSXServerBackup/OSX Server Backup-Prefix.pch";
+				INFOPLIST_FILE = "OSXServerBackup/OSX Server Backup-Info.plist";
+				OTHER_CODE_SIGN_FLAGS = "";
+				PRODUCT_NAME = "OSX Server Backup";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BE24E3E41902AAD100813B90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "osxsbak/osxsbak-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"osxsbak/osxsbak-Info.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+			};
+			name = Debug;
+		};
+		BE24E3E51902AAD100813B90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "osxsbak/osxsbak-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"osxsbak/osxsbak-Info.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+			};
+			name = Release;
+		};
+		BE8DC3BF1907172F00E1AA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helper/helper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"helper/helper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"helper/helper-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+			};
+			name = Debug;
+		};
+		BE8DC3C01907172F00E1AA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helper/helper-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"helper/helper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"helper/helper-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+			};
+			name = Release;
+		};
+		BEE632E919077D5400D2E440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "osxsbakTests/osxsbakTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "osxsbakTests/osxsbakTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BEE632EA19077D5400D2E440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "osxsbakTests/osxsbakTests-Prefix.pch";
+				INFOPLIST_FILE = "osxsbakTests/osxsbakTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE24E39619019C2B00813B90 /* Build configuration list for PBXProject "OSX Server Backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE24E3CA19019C2B00813B90 /* Debug */,
+				BE24E3CB19019C2B00813B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE24E3CC19019C2B00813B90 /* Build configuration list for PBXNativeTarget "OSX Server Backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE24E3CD19019C2B00813B90 /* Debug */,
+				BE24E3CE19019C2B00813B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE24E3E31902AAD100813B90 /* Build configuration list for PBXNativeTarget "osxsbak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE24E3E41902AAD100813B90 /* Debug */,
+				BE24E3E51902AAD100813B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE8DC3BE1907172F00E1AA58 /* Build configuration list for PBXNativeTarget "com.eeaapps.osxsbak.helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE8DC3BF1907172F00E1AA58 /* Debug */,
+				BE8DC3C01907172F00E1AA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEE632E819077D5400D2E440 /* Build configuration list for PBXNativeTarget "osxsbakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEE632E919077D5400D2E440 /* Debug */,
+				BEE632EA19077D5400D2E440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE24E39319019C2B00813B90 /* Project object */;
+}
