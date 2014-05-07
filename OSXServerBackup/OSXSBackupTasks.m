@@ -80,7 +80,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
 
 -(void)setLogFile:(NSString *)logFile{
     _logFile = logFile;
-    rotateLog(_logFile,NSCalendarUnitDay);
+    rotateLog(_logFile,NSCalendarUnitMonth);
 
     if(![[NSFileManager defaultManager]fileExistsAtPath:logFile isDirectory:nil]){
         [[NSData data] writeToFile:logFile options:0 error:nil];
@@ -89,7 +89,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     _logFileHandle = [NSFileHandle fileHandleForWritingAtPath:logFile];
     
     [_logFileHandle writeString:osxsbakLineBreak];
-    [_logFileHandle writeFormatString:@"Starting OSX Server Backup: %@\n",[NSDate dateWithTimeIntervalSinceNow:0]];
+    [_logFileHandle writeFormatString:@"Starting OSX Server Backup: %@\n",[NSDate date]];
 }
 
 #pragma mark - Open Directory
@@ -121,7 +121,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     
     NSTask *task = [NSTask new];
     task.launchPath = @"/usr/sbin/slapconfig";
-    NSString* arcDest = [NSString stringWithFormat:@"%@/ODArchive.dmg",_timeStampDirectory];
+    NSString* arcDest = [NSString stringWithFormat:@"%@/ODArchive.sparseimage",_timeStampDirectory];
     task.arguments = @[@"-backupdb",arcDest];
     
     
@@ -143,7 +143,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     [sendCommand writeData:data];
     [sendCommand closeFile];
     [task waitUntilExit];
-    
+    [self logResults:@"Open Directory" returnCode:task.terminationStatus];
     return [OSXSBError errorFromTask:task error:error];
 }
 
@@ -166,7 +166,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     
     //task.standardError  = task.standardOutput;
     
-    task.spawnCommand = @"spawn /usr/sbin/slapconfig -backupdb ./ODArchive.dmg";
+    task.spawnCommand = @"spawn /usr/sbin/slapconfig -backupdb ./ODArchive";
     task.timeout = -1;
 
     syslog(1, "setting password to %s",archivePassword.UTF8String);
@@ -179,7 +179,8 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     
     [task launchExpect];
     [task waitUntilExit];
-        
+    
+    [self logResults:@"Open Directory" returnCode:task.terminationStatus];
     return [OSXSBError errorFromTask:task error:error];
 }
 
@@ -220,6 +221,9 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     
     [task launch];
     [task waitUntilExit];
+    NSString *msg = [NSString stringWithFormat:@"Postgres Database: %@, ",database ? database:@"_postgres"];
+    [self logResults:msg returnCode:task.terminationStatus];
+
     return [OSXSBError errorFromTask:task error:error];
 }
 
@@ -453,7 +457,9 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     [task launch];
     [task waitUntilExit];
     [settingsFileHandle closeFile];
-    
+    NSString *msg = [NSString stringWithFormat:@"Serveradmin Setting: %@, ",settings];
+    [self logResults:msg returnCode:task.terminationStatus];
+
     return [OSXSBError errorFromTask:task error:error];
 }
 
@@ -475,7 +481,8 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     }
     NSArray *avaliableSettings = [self avaliableSettings];
     for(NSString* setting in avaliableSettings){
-        [self backupServeradminSettings:setting error:error];
+        if(![setting isEqualToString:@""])
+            [self backupServeradminSettings:setting error:error];
     }
     return [self backupServeradminSettings:@"all" error:error];
 }
@@ -695,6 +702,12 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     [task waitUntilExit];
     
     return [OSXSBError errorFromTask:task error:error];
+}
+
+-(void)logResults:(NSString*)description returnCode:(NSInteger)returnCode{
+    if(_logFileHandle){
+        [_logFileHandle writeFormatString:@"%@ finished backup with exit status: %d\n",description,returnCode];
+    }
 }
 
 -(BOOL)preflightCheck:(NSError*__autoreleasing*)error{

@@ -3,7 +3,9 @@
 //  AHKeychain
 //
 //  Created by Eldon on 4/30/14.
-//  Copyright (c) 2014 Eldon Ahrold. All rights reserved.
+//
+// This class is a derivitave of SSKeychain https://github.com/soffes/sskeychain/
+// And released under the same license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

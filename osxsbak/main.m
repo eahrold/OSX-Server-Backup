@@ -189,6 +189,7 @@ int main(int argc, char * argv[])
         }
         
         printf("%sStarting Backups...%s\n",BOLDBLACK,RESET);
+        printf("%sBacking up to directory %s %s\n",BOLDBLACK,backup_folder_location.UTF8String,RESET);
 
         OSStatus err        = 0;
         OSStatus status     = 0;
@@ -299,7 +300,7 @@ int main(int argc, char * argv[])
         }
         
         if(err > 0)
-            printf("There were errors during tha backup, check the logs for more details\n");
+            printf("%sThere were errors during tha backup, check the logs for more details\n%s",BOLDRED,RESET);
         
         // nil this to trigger dealloc...
         backupTask = nil;

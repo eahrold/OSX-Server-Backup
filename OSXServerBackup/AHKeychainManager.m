@@ -2,7 +2,8 @@
 //  AHKeychainManager.m
 //  AHKeychain
 //
-//  Created by Eldon on 4/30/14.
+// This class is a derivative of SSKeychain https://github.com/soffes/sskeychain/
+// And released under the same license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -158,13 +159,13 @@ NSString * kAHKeychainLoginKeychain = @"login";
 }
 
 -(void)setKeychainDomain:(AHKeychainDomains)keychainDomain{
-    if(!self.keychain){
+    if(!_keychain){
         switch (keychainDomain) {
             case kAHKeychainDomainSystem:
-                self.keychain = kAHKeychainSystemKeychain;
+                _keychain = kAHKeychainSystemKeychain;
                 break;
             default:
-                self.keychain = kAHKeychainLoginKeychain;
+                _keychain = kAHKeychainLoginKeychain;
                 break;
         }
     }
