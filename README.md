@@ -3,6 +3,8 @@ OSX-Server-Backup
 
 a CLI tool with GUI interface for backing up OS X Server
 
+!["Main Window"][main_window]
+
 The GUI handles backing and basic scheduling for OSX Server.app settings and data,
 such as settings generated from running serveradmin, all of the Postgres DB's managed
 by server, Open Directory, RADIUS, Named etc...
@@ -32,3 +34,4 @@ features for the things I currently use on server, but plan on fleshing out
 the reset as time allows.  Anyone interested in contributing should
 send me pull requests, they would be welcome.  
 
+[main_window]:./docs/main_window.png
