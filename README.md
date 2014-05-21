@@ -11,16 +11,18 @@ by server, Open Directory, RADIUS, Named etc...
 
 You can use the GUI tool to handle most things, or if you prefer
 you can just install the just install "osxsbak" CLI tool by running
+```
 /path/to/OSX Server Backup.app/Contents/MacOS/osxsbak --install
+```
 which installs the osxsbak into /usr/local/sbin/
 
 from there you can run 
 ```/usr/local/sbin/osxsbak -h``` 
 to see a full usage
 
-to completely remove OSX Server Backup.app you will want to remove these files
-eventually an uninstall method will be included in the GUI, but for now
-you'll have to do this manually.
+to completely remove OSX Server Backup.app you will want to remove these files...
+(eventually an uninstall method will be included in the GUI, but for now
+you'll have to do this manually.)
 ```
 /Library/PrivilegedHelperTools/com.eeaapps.osxsbak.helper
 /Library/LaunchDaemons/com.eeaapps.osxsbak.helper.plist
