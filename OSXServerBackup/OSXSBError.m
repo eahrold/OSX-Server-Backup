@@ -45,10 +45,9 @@ static NSString *osxsbErrorMessageFromCode(OSXSBErrorCodes code)
 +(BOOL)errorFromTask:(NSTask *)task error:(NSError *__autoreleasing *)error{
     if(error && task.terminationStatus != 0){
         NSString *errorMsg = [NSString stringWithFormat:@"There was a problem executing %@",task.launchPath];
-        *error = [NSError errorWithDomain:osxsbakPersistentDomain code:task.terminationStatus userInfo:@{NSLocalizedDescriptionKey:errorMsg}];
-        return NO;
+        *error = [NSError errorWithDomain:[[NSBundle mainBundle]bundleIdentifier] code:task.terminationStatus userInfo:@{NSLocalizedDescriptionKey:errorMsg}];
     }
-    return YES;
+    return (task.terminationStatus == 0);
 }
 
 +(BOOL)errorWithCode:(OSXSBErrorCodes)code error:(NSError *__autoreleasing *)error{
@@ -64,7 +63,7 @@ static NSString *osxsbErrorMessageFromCode(OSXSBErrorCodes code)
 
 +(NSError*)errorWithCode:(OSXSBErrorCodes)code{
     NSString * msg = osxsbErrorMessageFromCode(code);
-    NSError  * error = [NSError errorWithDomain:@"com.googlecode.MunkiMenu"
+    NSError  * error = [NSError errorWithDomain:[[NSBundle mainBundle]bundleIdentifier]
                                        code:code
                                    userInfo:@{NSLocalizedDescriptionKey:msg}];
     return error;

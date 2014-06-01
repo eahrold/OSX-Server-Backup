@@ -24,13 +24,16 @@
 // THE SOFTWARE.
 
 #import "OSXSBackupTasks.h"
+#import "OSXSBUtility.h"
 #import "NSTask+ExpectTask.h"
 #import "NSFileHandle+writeToFile.h"
+#import "AHDiskImage.h"
 #import "Objective-CUPS.h"
-#import "OSXSBUtility.h"
 #import <syslog.h>
 
-static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRoot/usr/sbin/serveradmin";
+static NSString *const kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRoot/usr/sbin/serveradmin";
+static NSString *const kOSXCertificateAuthority = @"/var/root/Library/Application Support/Certificate Authority/";
+
 
 @interface OSXSBackupTasks ()
 @property (copy,nonatomic) NSString* timeStampDirectory;
@@ -168,8 +171,6 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     
     task.spawnCommand = @"spawn /usr/sbin/slapconfig -backupdb ./ODArchive";
     task.timeout = -1;
-
-    syslog(1, "setting password to %s",archivePassword.UTF8String);
     
     NSDictionary *expectDictionary = @{kNSTaskExpectKey:@"Enter archive password:",
                                        kNSTaskSendKey:archivePassword,
@@ -371,26 +372,38 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
 }
 -(OSStatus)backupRadius{
     NSError *error;
-    if(![self backupRadius:&error]){
-        return (OSStatus)error.code;
-    }
-    return kOSXSBErrorSuccess;
+    [self backupRadius:&error];
+    return (OSStatus)error.code;
 }
 
 #pragma mark -- Keychain / Certificates
+-(BOOL)backupKeychainAndCertificatesWithPassword:(NSString*)password error:(NSError *__autoreleasing *)error{
+    AHDiskImage* dmg = [AHDiskImage new];
+    dmg.name = @"Keychain & Certificates";
+    dmg.sourceItems = @[@"/etc/certificates/",@"/Library/Keychains/",kOSXCertificateAuthority,@"/var/db/SystemKey"];
+    dmg.destination = _timeStampDirectory;
+    dmg.password = password;
+    dmg.logFileHandle = _logFileHandle;
+    return [dmg create:error];
+}
+
+-(OSStatus)backupKeychainAndCertificatesWithPassword:(NSString*)password{
+    NSError *error;
+    [self backupKeychainAndCertificatesWithPassword:password error:&error];
+    return (OSStatus)error.code;
+}
+
 -(BOOL)backupKeychain:(NSError *__autoreleasing *)error{
     if(![self preflightCheck:error]){
         return NO;
     }
-    return [OSXSBError errorWithCode:kOSXSBErrorFeatureNotImplamented error:error];
+    return [self zip:@"/Library/Keychains/" to:_timeStampDirectory error:error];
 }
 
 -(OSStatus)backupKeychain{
     NSError *error;
-    if(![self backupKeychain:&error]){
-        return (OSStatus)error.code;
-    }
-    return kOSXSBErrorSuccess;
+    [self backupKeychain:&error];
+    return (OSStatus)error.code;
 }
 
 -(BOOL)backupCertificateAuthorities:(NSError *__autoreleasing *)error{
@@ -433,7 +446,7 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     }
     
     NSTask *task = [NSTask new];
-    NSString *settingsDir = [NSString stringWithFormat:@"%@/Settings/",_timeStampDirectory];
+    NSString *settingsDir = [_timeStampDirectory stringByAppendingPathComponent:@"Settings"];
     NSString *settingsFilePath = [NSString stringWithFormat:@"%@/%@.txt",settingsDir,settings];
     
     if(![[NSFileManager defaultManager]fileExistsAtPath:settingsFilePath isDirectory:nil]){
@@ -585,10 +598,13 @@ static NSString * kOSXServeradmin = @"/Applications/Server.app/Contents/ServerRo
     }
     
     if(dict[OSXSBServiceKeychainKey]){
-        NSError* taskError;
-        NSString *taskName = @"Keychain";
+        NSString *taskName = @"Keychains & Certificates / CA's";
         starting(taskName);
-        if(![self backupKeychain:&taskError]){
+        NSError* taskError;
+        if(!password)
+            password = getPassword(self.directory,nil);
+        
+        if(![self backupKeychainAndCertificatesWithPassword:password error:&taskError]){
             errorOccured = YES;
         }
         complete(taskName,taskError);

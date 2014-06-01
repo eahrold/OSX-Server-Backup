@@ -73,7 +73,6 @@
 - (IBAction)chooseBackupDir:(NSButton *)sender;
 - (IBAction)closePanel:(NSButton *)sender;
 
-
 - (void)startProgressPanel;
 - (void)stopProgressPanel;
 

@@ -650,7 +650,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="444"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1130"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="444"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -667,7 +667,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-My-iR9">
-                        <rect key="frame" x="30" y="161" width="283" height="20"/>
+                        <rect key="frame" x="30" y="186" width="283" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Protect backup directory with strong permissions" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fxu-Br-aGq">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -678,7 +678,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krr-9x-beG">
-                        <rect key="frame" x="30" y="141" width="283" height="20"/>
+                        <rect key="frame" x="30" y="166" width="283" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Log status to /var/log/osxsbak.log" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="IZO-fd-bBd">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -911,7 +911,7 @@
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCk-aq-dmX">
-                        <rect key="frame" x="31" y="106" width="83" height="17"/>
+                        <rect key="frame" x="31" y="143" width="83" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max Backups:" id="AwZ-Ud-hpP">
                             <font key="font" metaFont="smallSystem"/>
@@ -920,7 +920,7 @@
                         </textFieldCell>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sa-I5-Hzl">
-                        <rect key="frame" x="108" y="104" width="96" height="22"/>
+                        <rect key="frame" x="108" y="141" width="96" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="7" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="uhH-5K-dbg" id="MLw-XW-eVg">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -934,6 +934,17 @@
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-Kd-PqF">
+                        <rect key="frame" x="33" y="111" width="118" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" title="Set Archive Password" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g06-Zd-uoB">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="updateArchivePassword:" target="494" id="6LT-so-9jc"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
@@ -966,7 +977,7 @@
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="385" y="323" width="450" height="307"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1130"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="P5e-MT-d8Z">
                 <rect key="frame" x="0.0" y="0.0" width="450" height="307"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

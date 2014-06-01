@@ -84,7 +84,7 @@
 }
 
 - (IBAction)run:(NSButton *)sender {
-    if(_openDirectoryCheckbox.state){
+    if(_openDirectoryCheckbox.state || _keychainCheckbox.state){
         [self promptForPassword:1];
     }else{
         [self runBackup:nil];
@@ -167,7 +167,6 @@
     }];
 }
 
-
 - (IBAction)removeSchedule:(NSButton*)sender{
     NSData *authorization = [OSXSBAuthorizer authorizeHelper];
     assert(authorization != nil);
@@ -217,6 +216,10 @@
 
 - (IBAction)removeCliTool:(NSButton *)sender{
 
+}
+
+- (IBAction)updateArchivePassword:(id)sender {
+    [self promptForPassword:2];
 }
 
 -(void)addPasswordToKeychain:(NSString*)password{
@@ -333,7 +336,7 @@
                 info = @"A password is required to backup Open Directory, this will only be used this one time and not stored in your keychain";
                 break;
             case 2:
-                info = @"A backing up Open Directory requires a password, we need to add this to the system keychain so the osxsbak cli tool can access it.  It will create an item call com.eeaapps.osxsbak";
+                info = @"A backing up both Open Directory and Keychains/Certificates requires a password, we need to add this to the system keychain so the osxsbak cli tool can access it.  It will create an item call com.eeaapps.osxsbak";
                 break;
             default:
                 info = @"enter password";

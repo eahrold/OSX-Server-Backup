@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE115D3A1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
-		BE115D3B1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
-		BE115D3C1911DAB200CB7530 /* AHKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE115D391911DAB200CB7530 /* AHKeychainManager.m */; };
+		BE01079B1922C03000396E6C /* AHDiskImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE01079A1922C03000396E6C /* AHDiskImage.m */; };
+		BE01079C1922C03000396E6C /* AHDiskImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE01079A1922C03000396E6C /* AHDiskImage.m */; };
+		BE01079D1922C03000396E6C /* AHDiskImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE01079A1922C03000396E6C /* AHDiskImage.m */; };
+		BE232B9C1936B64300F20649 /* OSXSRestoreTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BE232B9B1936B64300F20649 /* OSXSRestoreTask.m */; };
+		BE232B9D1936B64300F20649 /* OSXSRestoreTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BE232B9B1936B64300F20649 /* OSXSRestoreTask.m */; };
+		BE232B9E1936B64300F20649 /* OSXSRestoreTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BE232B9B1936B64300F20649 /* OSXSRestoreTask.m */; };
 		BE24E39F19019C2B00813B90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E39E19019C2B00813B90 /* Cocoa.framework */; };
 		BE24E3A919019C2B00813B90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE24E3A719019C2B00813B90 /* InfoPlist.strings */; };
 		BE24E3AB19019C2B00813B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3AA19019C2B00813B90 /* main.m */; };
@@ -22,6 +25,12 @@
 		BE24E3DE1902AAD100813B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3DD1902AAD100813B90 /* main.m */; };
 		BE24E3E91902AB1800813B90 /* osxsbak in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE24E3D91902AAD100813B90 /* osxsbak */; };
 		BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */; };
+		BE3DA0501920377800BAC90C /* AHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04D1920377800BAC90C /* AHKeychain.m */; };
+		BE3DA0511920377800BAC90C /* AHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04D1920377800BAC90C /* AHKeychain.m */; };
+		BE3DA0521920377800BAC90C /* AHKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04F1920377800BAC90C /* AHKeychainItem.m */; };
+		BE3DA0531920377800BAC90C /* AHKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04F1920377800BAC90C /* AHKeychainItem.m */; };
+		BE3DA0551920515700BAC90C /* AHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04D1920377800BAC90C /* AHKeychain.m */; };
+		BE3DA057192051C400BAC90C /* AHKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DA04F1920377800BAC90C /* AHKeychainItem.m */; };
 		BE8DC3B61907172F00E1AA58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24E3DA1902AAD100813B90 /* Foundation.framework */; };
 		BE8DC3C21907197F00E1AA58 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7BB61906F3240086892D /* Security.framework */; };
 		BE8DC3C31907198300E1AA58 /* libAHLaunchCtl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC7C071907092D0086892D /* libAHLaunchCtl.a */; };
@@ -207,11 +216,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BE115D381911DAB200CB7530 /* AHKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKeychainManager.h; sourceTree = "<group>"; };
-		BE115D391911DAB200CB7530 /* AHKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKeychainManager.m; sourceTree = "<group>"; };
+		BE0107991922C03000396E6C /* AHDiskImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHDiskImage.h; sourceTree = "<group>"; };
+		BE01079A1922C03000396E6C /* AHDiskImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHDiskImage.m; sourceTree = "<group>"; };
 		BE1E59AE190DBEB6000BBC2C /* osxsbak-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "osxsbak-Info.plist"; sourceTree = "<group>"; };
 		BE1F1B1E19102675001D2EA4 /* HelperTool_CodeSign_RunScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HelperTool_CodeSign_RunScript.py; sourceTree = "<group>"; };
 		BE1F1B20191028E8001D2EA4 /* Resign_CodeSign_RunScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = Resign_CodeSign_RunScript.py; sourceTree = "<group>"; };
+		BE232B9A1936B64300F20649 /* OSXSRestoreTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXSRestoreTask.h; sourceTree = "<group>"; };
+		BE232B9B1936B64300F20649 /* OSXSRestoreTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXSRestoreTask.m; sourceTree = "<group>"; };
 		BE24E39B19019C2B00813B90 /* OSX Server Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX Server Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE24E39E19019C2B00813B90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BE24E3A119019C2B00813B90 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -233,6 +244,10 @@
 		BE24E3DA1902AAD100813B90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE24E3DD1902AAD100813B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BE24E3E01902AAD100813B90 /* osxsbak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "osxsbak-Prefix.pch"; sourceTree = "<group>"; };
+		BE3DA04C1920377800BAC90C /* AHKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKeychain.h; sourceTree = "<group>"; };
+		BE3DA04D1920377800BAC90C /* AHKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKeychain.m; sourceTree = "<group>"; };
+		BE3DA04E1920377800BAC90C /* AHKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKeychainItem.h; sourceTree = "<group>"; };
+		BE3DA04F1920377800BAC90C /* AHKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKeychainItem.m; sourceTree = "<group>"; };
 		BE8DC3B51907172F00E1AA58 /* com.eeaapps.osxsbak.helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.eeaapps.osxsbak.helper; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA37096190D898D0073E12E /* AHCodesignValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCodesignValidator.h; sourceTree = "<group>"; };
 		BEA37097190D898D0073E12E /* AHCodesignValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCodesignValidator.m; sourceTree = "<group>"; };
@@ -400,8 +415,12 @@
 		BE24E3A519019C2B00813B90 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE115D381911DAB200CB7530 /* AHKeychainManager.h */,
-				BE115D391911DAB200CB7530 /* AHKeychainManager.m */,
+				BE0107991922C03000396E6C /* AHDiskImage.h */,
+				BE01079A1922C03000396E6C /* AHDiskImage.m */,
+				BE3DA04C1920377800BAC90C /* AHKeychain.h */,
+				BE3DA04D1920377800BAC90C /* AHKeychain.m */,
+				BE3DA04E1920377800BAC90C /* AHKeychainItem.h */,
+				BE3DA04F1920377800BAC90C /* AHKeychainItem.m */,
 				BEA37096190D898D0073E12E /* AHCodesignValidator.h */,
 				BEA37097190D898D0073E12E /* AHCodesignValidator.m */,
 				BEBC7BE41906FC670086892D /* HelperTool_CodeSign_RunScript.py */,
@@ -463,6 +482,8 @@
 				BEBC7BF3190704B00086892D /* OSXSBAuthorizer.m */,
 				BE24E3D21901BAC900813B90 /* OSXSBackupTasks.h */,
 				BE24E3D31901BAC900813B90 /* OSXSBackupTasks.m */,
+				BE232B9A1936B64300F20649 /* OSXSRestoreTask.h */,
+				BE232B9B1936B64300F20649 /* OSXSRestoreTask.m */,
 				BEE632FA1908177700D2E440 /* OSXSBError.h */,
 				BEE632FB1908177700D2E440 /* OSXSBError.m */,
 				BEE632EF190800C900D2E440 /* OSXSBUtility.h */,
@@ -766,13 +787,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE632F1190800C900D2E440 /* OSXSBUtility.m in Sources */,
+				BE3DA0551920515700BAC90C /* AHKeychain.m in Sources */,
+				BE232B9C1936B64300F20649 /* OSXSRestoreTask.m in Sources */,
+				BE3DA057192051C400BAC90C /* AHKeychainItem.m in Sources */,
+				BE01079B1922C03000396E6C /* AHDiskImage.m in Sources */,
 				BE24E3B219019C2B00813B90 /* OSXSBAppDelegate.m in Sources */,
 				BEBC7BF9190708330086892D /* OSXSBHelperConnection.m in Sources */,
-				BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */,
 				BEBC7BF4190704B00086892D /* OSXSBAuthorizer.m in Sources */,
 				BEE632FC1908177700D2E440 /* OSXSBError.m in Sources */,
-				BEE632F1190800C900D2E440 /* OSXSBUtility.m in Sources */,
-				BE115D3A1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
+				BE24E3D41901BAC900813B90 /* OSXSBackupTasks.m in Sources */,
 				BE24E3AB19019C2B00813B90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,11 +807,14 @@
 			files = (
 				BEE632F2190800C900D2E440 /* OSXSBUtility.m in Sources */,
 				BE24E3EA1902AB6A00813B90 /* OSXSBackupTasks.m in Sources */,
+				BE01079D1922C03000396E6C /* AHDiskImage.m in Sources */,
 				BEE632F7190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */,
-				BE115D3C1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
 				BEBC7B9D1906B7910086892D /* NSTask+ExpectTask.m in Sources */,
 				BEE632FD1908177700D2E440 /* OSXSBError.m in Sources */,
 				BE24E3DE1902AAD100813B90 /* main.m in Sources */,
+				BE3DA0511920377800BAC90C /* AHKeychain.m in Sources */,
+				BE232B9E1936B64300F20649 /* OSXSRestoreTask.m in Sources */,
+				BE3DA0531920377800BAC90C /* AHKeychainItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,14 +824,17 @@
 			files = (
 				BEE632F3190800C900D2E440 /* OSXSBUtility.m in Sources */,
 				BE8DC3C9190719DB00E1AA58 /* OSXSBAuthorizer.m in Sources */,
+				BE232B9D1936B64300F20649 /* OSXSRestoreTask.m in Sources */,
+				BE3DA0501920377800BAC90C /* AHKeychain.m in Sources */,
+				BE3DA0521920377800BAC90C /* AHKeychainItem.m in Sources */,
 				BEA37098190D898D0073E12E /* AHCodesignValidator.m in Sources */,
 				BE8DC3CA190719E300E1AA58 /* OSXSBHelper.m in Sources */,
 				BE8DC3CB190719E600E1AA58 /* OSXSBackupTasks.m in Sources */,
 				BEE632F8190806FC00D2E440 /* NSFileHandle+writeToFile.m in Sources */,
 				BE8DC3CC190719F300E1AA58 /* NSTask+ExpectTask.m in Sources */,
 				BEE632FE1908177700D2E440 /* OSXSBError.m in Sources */,
-				BE115D3B1911DAB200CB7530 /* AHKeychainManager.m in Sources */,
 				BEE632B71907560E00D2E440 /* main.m in Sources */,
+				BE01079C1922C03000396E6C /* AHDiskImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +1006,7 @@
 				INFOPLIST_FILE = "OSXServerBackup/OSX Server Backup-Info.plist";
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "OSX Server Backup";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -992,6 +1023,7 @@
 				INFOPLIST_FILE = "OSXServerBackup/OSX Server Backup-Info.plist";
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "OSX Server Backup";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1018,6 +1050,7 @@
 					"osxsbak/osxsbak-Info.plist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
@@ -1039,6 +1072,7 @@
 					"osxsbak/osxsbak-Info.plist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;
@@ -1064,6 +1098,7 @@
 					"helper/helper-Launchd.plist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
@@ -1085,6 +1120,7 @@
 					"helper/helper-Launchd.plist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;

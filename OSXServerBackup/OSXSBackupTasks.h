@@ -33,24 +33,24 @@ typedef NS_ENUM(NSInteger, OSXSBPermissionLevel){
     kOSXSBPermissionStrong = 700,
 };
 
-static NSString *const OSXSBBackupDirectoryKey      = @"OSXSBBackupDirectoryKey";
-static NSString *const OSXSBPermissionsKey          = @"OSXSBPermissionsKey";
-static NSString *const OSXSBLogBackupKey            = @"OSXSBNoLoggingKey";
-static NSString *const OSXSBPasswordKey             = @"OSXSBPasswordKey";
-static NSString *const OSXSBMaxBackupsKey           = @"OSXSBMaxBackupsKey";
+static NSString *const OSXSBBackupDirectoryKey      = @"com.eeaapps.OSXSBBackupDirectoryKey";
+static NSString *const OSXSBPermissionsKey          = @"com.eeaapps.OSXSBPermissionsKey";
+static NSString *const OSXSBLogBackupKey            = @"com.eeaapps.OSXSBNoLoggingKey";
+static NSString *const OSXSBPasswordKey             = @"com.eeaapps.OSXSBPasswordKey";
+static NSString *const OSXSBMaxBackupsKey           = @"com.eeaapps.OSXSBMaxBackupsKey";
 
-static NSString *const OSXSBPostgresStandardKey     = @"OSXSBPostgresStandardKey";
-static NSString *const OSXSBPostgresDevicemgrKey    = @"OSXSBPostgresDevicemgrKey";
-static NSString *const OSXSBPostgresCalendarKey     = @"OSXSBPostgresCalendarKey";
-static NSString *const OSXSBPostgresCollabKey       = @"OSXSBPostgresCollabKey";
+static NSString *const OSXSBPostgresStandardKey     = @"com.eeaapps.OSXSBPostgresStandardKey";
+static NSString *const OSXSBPostgresDevicemgrKey    = @"com.eeaapps.OSXSBPostgresDevicemgrKey";
+static NSString *const OSXSBPostgresCalendarKey     = @"com.eeaapps.OSXSBPostgresCalendarKey";
+static NSString *const OSXSBPostgresCollabKey       = @"com.eeaapps.OSXSBPostgresCollabKey";
 
-static NSString *const OSXSBServiceOpenDirectoryKey = @"OSXSBOpenDirectoryKey";
-static NSString *const OSXSBServiceNamedKey         = @"OSXSBNamedKey";
-static NSString *const OSXSBServiceRadiusKey        = @"OSXSBRadiusKey";
-static NSString *const OSXSBServicePrintersKey      = @"OSXSBPrintersKey";
-static NSString *const OSXSBServiceKeychainKey      = @"OSXSBKeychainKey";
-static NSString *const OSXSBServiceMailKey          = @"OSXSBMailKey";
-static NSString *const OSXSBServiceServeradminKey   = @"OSXSBServeradminKey";
+static NSString *const OSXSBServiceOpenDirectoryKey = @"com.eeaapps.OSXSBOpenDirectoryKey";
+static NSString *const OSXSBServiceNamedKey         = @"com.eeaapps.OSXSBNamedKey";
+static NSString *const OSXSBServiceRadiusKey        = @"com.eeaapps.OSXSBRadiusKey";
+static NSString *const OSXSBServicePrintersKey      = @"com.eeaapps.OSXSBPrintersKey";
+static NSString *const OSXSBServiceKeychainKey      = @"com.eeaapps.OSXSBKeychainKey";
+static NSString *const OSXSBServiceMailKey          = @"com.eeaapps.OSXSBMailKey";
+static NSString *const OSXSBServiceServeradminKey   = @"com.eeaapps.OSXSBServeradminKey";
 
 @interface OSXSBackupTasks : NSObject
 
@@ -97,6 +97,9 @@ static NSString *const OSXSBServiceServeradminKey   = @"OSXSBServeradminKey";
 
 -(BOOL)backupRadius:(NSError **)error;
 -(OSStatus)backupRadius;
+
+-(BOOL)backupKeychainAndCertificatesWithPassword:(NSString*)password error:(NSError *__autoreleasing *)error;
+-(OSStatus)backupKeychainAndCertificatesWithPassword:(NSString*)password;
 
 -(BOOL)backupKeychain:(NSError **)error;
 -(OSStatus)backupKeychain;

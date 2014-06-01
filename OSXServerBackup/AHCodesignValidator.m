@@ -13,10 +13,7 @@
 
 +(SecCertificateRef)codesignCertOfItemAtPath:(NSString *)path error:(NSError *__autoreleasing *)error{
     SecCertificateRef cert = NULL;
-//    NSURL *url = [NSURL URLWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURL *url = [NSURL URLWithString:[path stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-//    NSURL *url = [NSURL URLWithString:path];
-
     if (url) {
         SecStaticCodeRef staticCodeRef = NULL;
         if (SecStaticCodeCreateWithPath((__bridge CFURLRef)(url),0,&staticCodeRef) == errSecSuccess){
@@ -41,10 +38,10 @@
 }
 
 +(NSString *)certNameOfItemAtPath:(NSString *)path error:(NSError *__autoreleasing *)error{
-    CFStringRef certString;
-    NSString *certName;
+    CFStringRef certString = NULL;
+    NSString    *certName  = nil;
+    
     SecCertificateRef cert = [self codesignCertOfItemAtPath:path error:error];
-
     if(cert != NULL){
         if(SecCertificateCopyCommonName(cert, &certString) == errSecSuccess){
             certName = CFBridgingRelease(certString);
@@ -60,7 +57,7 @@
     SecCertificateRef cert = [self codesignCertOfItemAtPath:path error:error];
     
     if(cert != NULL){
-        data = (__bridge_transfer NSData *)(SecCertificateCopyData(cert));
+        data = CFBridgingRelease(SecCertificateCopyData(cert));
         CFRelease(cert);
     }
     return data;

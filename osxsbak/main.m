@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OSXSBackupTasks.h"
 #import "OSXSBUtility.h"
+#import "AHKeychain.h"
 #import <getopt.h>
 
 int usage(int rc);
@@ -157,7 +158,7 @@ int main(int argc, char * argv[])
             if (backup_folder_location)
                 [dict setObject:backup_folder_location forKey:@"BackupDirectory"];
             
-            printf("%sSetting defaults. From now on these will be used when nothing is specified\n%s",BOLDBLUE,RESET);
+            printf("%sSetting defaults. From now on these will be used if nothing is specified\n%s",BOLDBLUE,RESET);
             for (id key in [dict allKeys]){
                 printf("   %s\n",[[NSString stringWithFormat:@"%@ = %@",key,dict[key]] UTF8String]);
             }
@@ -178,10 +179,10 @@ int main(int argc, char * argv[])
         }
         
         
-        if(bk_dirserv && !archive_password){
+        if((bk_dirserv || bk_keychain) && !archive_password){
             archive_password = getPassword(backup_folder_location,nil);
             if(!archive_password){
-                printfErrorString(@"Backing up Open Directory requires a password\n\
+                printfErrorString(@"Backing up Open Directory And Keychain requires a password\n\
                                   Please set on in your keychain using ../osxsbak --set --password=yourpass\n\
                                   or put a file called .archivePass in the root of your backup directory");
                 return kOSXSBErrorNoPasswordForArchive;
@@ -245,7 +246,7 @@ int main(int argc, char * argv[])
         
         if(bk_keychain == 1){
             printfBackupMessage("Keychain");
-            status = [backupTask backupKeychain];
+            status = [backupTask backupKeychainAndCertificatesWithPassword:archive_password];
             printfSuccessStatus(status);
             if(status != 0){
                 err = 1;
@@ -269,6 +270,7 @@ int main(int argc, char * argv[])
                 err = 1;
             }
         }
+        
         if(bk_pg_devicemgr == 1){
             printfBackupMessage("Profile Manager Postgres");
             status = [backupTask backupDeviceManagerPostgres];
@@ -318,7 +320,7 @@ const char *version(){
 #pragma mark - messages
 int usage(int rc)
 {
-    printf("%sosxsbak version %s.  Backup OSX Server Data and Settings%s\n",version(),BOLDBLUE,RESET);
+    printf("%sBackup OSX Server Data and Settings%s\n",BOLDBLUE,RESET);
     printf("Usage: ../../osxsbak [action] [settings] [options]\n");
     printf("Actions:\n");
     printf("  -I|--install                      Install at /usr/local/sbin/osxsbak\n");
@@ -340,9 +342,9 @@ int usage(int rc)
     printf("Options:\n");
     printf("  --settings                        Backup Server.app (serveradmin) settings \n");
     printf("  --dirserv                         Backup OpenDirectory\n");
-    printf("  --named                           Backup Named\n");
-    printf("  --radius                          Backup Radius\n");
-    printf("  --keychain                        Backup Keychains and Certificate Authorities\n");
+    printf("  --named                           Backup Named (DNS)\n");
+    printf("  --radius                          Backup RADIUS\n");
+    printf("  --keychain                        Backup System Keychain, Certificates and CA's\n");
     printf("  --printers                        Backup Printers\n");
     printf("  --pg-osx                          Backup OSX Postgres\n");
     printf("  --pg-caldav                       Backup Calendar and Contacts Postgres\n");
@@ -353,6 +355,10 @@ int usage(int rc)
     printf("\n");
     printf("Example: to backup Open Dirctory,DNS and OSX's Postgres run\n");
     printf("/usr/sbin/osxsbak --backupdir=/Volumes/Backup/folder --password=mypass --dirserv --named --pg-osx\n\n");
+    printf("Example: to set password and backup directory to use on subsequent runs\n");
+    printf("/usr/sbin/osxsbak --set --backupdir=/Volumes/Backup/folder --password=mypass\n\n");
+    printf("%sCurrently installed osxsbak version %s %s\n",BOLDBLUE,version(),RESET);
+
     
     return rc;
 }

@@ -8,7 +8,7 @@
 
 #import "OSXSBUtility.h"
 #import "OSXSBError.h"
-#import "AHKeychainManager.h"
+#import "AHKeychain.h"
 
 #pragma mark - Install
 BOOL selfInstallCheck(NSString * exeSelf, NSString * exeDest, NSError *__autoreleasing* error){
@@ -187,49 +187,49 @@ BOOL bZip2File(NSString* filePath,BOOL overwrite, NSError *__autoreleasing* erro
 }
 
 #pragma mark - Password
-AHKeychainManager * setupKeychainManager(){
-    AHKeychainManager *item = [[AHKeychainManager alloc] init];
+AHKeychainItem * setupKeychainItem(){
+    AHKeychainItem *item = [[AHKeychainItem alloc] init];
     item.service = osxsbakPersistentDomain;
+    item.label = @"OSX Server Backup & osxsbak";
     item.account = @"root";
-    item.keychainDomain = kAHKeychainDomainSystem;
     return item;
 }
 
 
 NSString * getPassword(NSString* backupDir,NSError *__autoreleasing*error){
-    NSString* password;
+    NSString* password = nil;
     password = [[NSString alloc]initWithContentsOfFile:[NSString stringWithFormat:@"%@/.archivePass",backupDir]
                                               encoding:NSASCIIStringEncoding
                                                  error:nil];
     if(password == nil){
-        AHKeychainManager *item = setupKeychainManager();
-        [item get:error];
-        password = item.password;
+        AHKeychainItem *item = setupKeychainItem();
+        if([[AHKeychain systemKeychain] getItem:item error:error])
+            return item.password;
     }
     return password;
 }
 
 BOOL setKeychainPassword(NSString *password,NSError *__autoreleasing*error){
 //    return [SSKeychain setPassword:password forService:osxsbakPersistentDomain account:@"root" error:error];
-    AHKeychainManager *item = setupKeychainManager();
+    AHKeychainItem *item = setupKeychainItem();
     item.password = password;
     item.trustedApplications = @[@"/usr/local/sbin/osxsbak",
                                  @"/Library/PrivilegedHelperTools/com.eeaapps.osxsbak.helper",
                                  @"/usr/bin/security"];
     
-    return [item save:error];
+    return [[AHKeychain systemKeychain] saveItem:item error:error];
 }
 
+
 BOOL removeKeychainPassword(NSError *__autoreleasing*error){
-    AHKeychainManager *item = setupKeychainManager();
-    return [item remove:error];
+    AHKeychainItem *item = setupKeychainItem();
+    return [[AHKeychain systemKeychain] deleteItem:item error:error];
 }
 
 BOOL checkForKeychainItem(NSError **error){
-    AHKeychainManager *item = setupKeychainManager();
-    return [item find:error];
+    AHKeychainItem *item = setupKeychainItem();
+    return [[AHKeychain systemKeychain] findItem:item error:error];
 }
-
 
 #pragma mark - Versioning
 NSString *embeddedVersionOfItemAtPath(NSString* path){

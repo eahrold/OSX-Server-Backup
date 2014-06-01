@@ -51,7 +51,7 @@ def main():
     app_path = os.getenv('CODESIGNING_FOLDER_PATH')
     checkVar(app_path,'PRODUCT_NAME')
     
-    #    signFrameworks(build_dir)
+#    signFrameworks(build_dir)
     deepSign(app_path)
     logging.info('### Done with RunScript####\n\n')
 
